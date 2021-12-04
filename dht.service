@@ -1,0 +1,14 @@
+[Unit]
+Description=dht
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/sudo /usr/bin/python3 dht.py
+WorkingDirectory=/home/pi/prototype
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
